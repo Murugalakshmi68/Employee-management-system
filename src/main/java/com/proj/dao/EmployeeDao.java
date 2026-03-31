@@ -8,7 +8,6 @@ import java.util.List;
 
 @Repository
 public class EmployeeDao {
-
     private static List<Employee> list = new ArrayList<>();
 
     static {

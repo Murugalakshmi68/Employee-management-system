@@ -68,4 +68,26 @@ public class EmployeeController {
         service.updateEmployee(emp);
         return "redirect:/";
     }
+    @GetMapping("/search")
+    public String search(@RequestParam String name, Model model) {
+
+        List<Employee> list = service.searchEmployee(name);
+
+        model.addAttribute("employees", list); // 🔥 MUST match JSP
+
+        model.addAttribute("totalEmployees", list.size());
+
+        Set<String> dept = new HashSet<>();
+        Set<String> role = new HashSet<>();
+
+        for (Employee e : list) {
+            dept.add(e.getDepartment());
+            role.add(e.getRole());
+        }
+
+        model.addAttribute("deptCount", dept.size());
+        model.addAttribute("roleCount", role.size());
+
+        return "home";
+    }
 }

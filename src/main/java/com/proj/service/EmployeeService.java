@@ -5,7 +5,9 @@ import com.proj.dao.EmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
@@ -31,5 +33,11 @@ public class EmployeeService {
 
     public void updateEmployee(Employee emp) {
         dao.updateEmployee(emp);
+    }
+    public List<Employee> searchEmployee(String name) {
+        return dao.getAllEmployees()
+                .stream()
+                .filter(e -> e.getName().toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList());
     }
 }

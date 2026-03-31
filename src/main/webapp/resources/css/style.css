@@ -205,6 +205,48 @@ button:hover {
 .back-btn:hover {
     text-decoration: underline;
 }
+/* SEARCH BOX */
+.search-box {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-box form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.search-box button {
+    padding: 8px 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #1e40af;
+}
+
+.reset-btn {
+    padding: 8px 12px;
+    background: #6b7280;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.reset-btn:hover {
+    background: #4b5563;
+}
 
 /* ANIMATION */
 @keyframes fadeIn {
