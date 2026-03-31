@@ -206,48 +206,74 @@ button:hover {
     text-decoration: underline;
 }
 /* SEARCH BOX */
+/* SEARCH BOX - IMPROVED */
 .search-box {
-    margin: 20px 0;
+    margin: 25px 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .search-box form {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
+/* Input */
 .search-box input {
-    padding: 8px 12px;
+    padding: 10px 14px;
+    width: 220px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
+.search-box input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Buttons */
+.search-box button,
+.search-box .reset-btn {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Search button */
 .search-box button {
-    padding: 8px 14px;
     background: #2563eb;
     color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
 .search-box button:hover {
     background: #1e40af;
 }
 
-.reset-btn {
-    padding: 8px 12px;
+/* Reset button (make it look like button, not link) */
+.search-box .reset-btn {
     background: #6b7280;
     color: white;
-    border-radius: 6px;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.reset-btn:hover {
+.search-box .reset-btn:hover {
     background: #4b5563;
 }
-
 /* ANIMATION */
 @keyframes fadeIn {
     from {
